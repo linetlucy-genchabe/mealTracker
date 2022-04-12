@@ -11,6 +11,7 @@ export class MealFormComponent implements OnInit {
   @Output() addMeal =new EventEmitter<Meal>();
   submitMeal(){
     this.addMeal.emit(this.newMeal);
+    this.newMeal=new Meal (0,"",0,"")
   }
   constructor() { }
 

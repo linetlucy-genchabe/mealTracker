@@ -13,11 +13,11 @@ export class MealComponent implements OnInit {
   ];
 
 
-  addNewMeal(meal:any){
+  addNewMeal(meals:any){
     let mealLength = this.meal.length;
-    meal.id = mealLength+1;
+    meals.id = mealLength+1;
     
-    this.meal.push(meal)
+    this.meal.push(meals)
   }
   constructor() { }
 
