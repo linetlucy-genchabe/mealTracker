@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit , Output, EventEmitter} from '@angular/core';
 import { Meal } from '../meal';
 @Component({
   selector: 'app-meal-details',
@@ -7,6 +7,8 @@ import { Meal } from '../meal';
 })
 export class MealDetailsComponent implements OnInit {
   @Input() meal!:Meal
+  @Output() isComplete = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
