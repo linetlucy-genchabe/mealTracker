@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-meal-form></app-meal-form>
+        </div>
+        <div class="col-md-6">
+            <div *ngFor="let meals of meal;">
+
+                <p>{{meals.id}}.{{meals.name}}</p>
+                <app-meal-details [meal]="meals"></app-meal-details>
+                <button class="btn btn-danger">Edit</button>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
