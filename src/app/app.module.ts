@@ -6,20 +6,26 @@ import { AppComponent } from './app.component';
 import { MealComponent } from './meal/meal.component';
 import { MealDetailsComponent } from './meal-details/meal-details.component';
 import { MealFormComponent } from './meal-form/meal-form.component';
+import { MealServiceService } from './meal-service.service';
+import { ViewmealsComponent } from './viewmeals/viewmeals.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MealComponent,
     MealDetailsComponent,
-    MealFormComponent
+    MealFormComponent,
+    ViewmealsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [MealServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

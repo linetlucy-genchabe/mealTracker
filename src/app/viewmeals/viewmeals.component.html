@@ -1,0 +1,28 @@
+<div>
+    <button class="all" (click)="viewAllFoods()">ALL FOODS</button>
+    <button class="high" (click)="viewHighFoods()">HIGH CALORIE FOODS</button>
+    <button class="low" (click)="viewLowFoods()">LOW CALORIE FOODS</button>
+</div>
+
+<style>
+    .all {
+        background-color: darkturquoise;
+    }
+    
+    .high {
+        background-color: chartreuse;
+        margin-left: 5px;
+    }
+    
+    .low {
+        background-color: darkorange;
+        margin-left: 5px;
+    }
+</style>
+<!-- 
+<li *ngFor="let hero of heroes">
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li> -->
