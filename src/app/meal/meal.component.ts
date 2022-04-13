@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, Output,EventEmitter, OnInit } from '@angular/core';
 import { Meal } from '../meal';
 import { MealServiceService } from '../meal-service.service';
 
@@ -15,12 +15,41 @@ export class MealComponent implements OnInit {
   // ];
 
 
-  addNewMeal(meals:any){
-    let mealLength = this.meal.length;
-    meals.id = mealLength+1;
+  // addNewMeal(meals:any){
+  //   let mealLength = this.meal.length;
+  //   meals.id = mealLength+1;
     
-    this.meal.push(meals)
-  }
+  //   this.meal.push(meals)
+  // }
+
+  @Input()
+  inputMealList: Meal[] = [];
+  @Output()    
+  outputDetails = new EventEmitter();
+  addNewMeal(meals:any){
+  let mealLength = this.meal.length;
+  meals.id = mealLength+1;     
+  this.meal.push(meals)
+}
+
+viewHighFoods(){
+
+}
+viewLowFoods(){
+
+}
+editMeal(meals:any){
+  this.outputDetails.emit(meals)    
+}
+deleteMeal(meals:any){
+  this.meal.splice(meals,1)
+}
+// showMealDetailToEdit($event){
+//   this.
+// }
+resetSelection(){
+  this.meal!=null;
+}
   constructor(mealService:MealServiceService) { 
     this.meal=mealService.getMeals();
 

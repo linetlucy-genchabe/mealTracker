@@ -8,6 +8,9 @@ import { MealDetailsComponent } from './meal-details/meal-details.component';
 import { MealFormComponent } from './meal-form/meal-form.component';
 import { MealServiceService } from './meal-service.service';
 import { ViewmealsComponent } from './viewmeals/viewmeals.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MealEditFormComponent } from './meal-edit-form/meal-edit-form.component';
+import { CaloriesPipe } from './calories.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ViewmealsComponent } from './viewmeals/viewmeals.component';
     MealDetailsComponent,
     MealFormComponent,
     ViewmealsComponent,
+    NavbarComponent,
+    MealEditFormComponent,
+    CaloriesPipe,
 
   ],
   imports: [
